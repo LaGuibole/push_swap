@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:07:07 by guphilip          #+#    #+#             */
-/*   Updated: 2024/12/29 12:21:03 by guphilip         ###   ########.fr       */
+/*   Updated: 2024/12/29 15:19:46 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,23 +135,23 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 # define L_HEX_CHARSET "0123456789abcdef"
 # define U_HEX_CHARSET "0123456789ABCDEF"
 
-int	ft_print_c(char c);
+int		ft_print_c(char c);
 
-int	ft_printf(const char *str, ...);
+int		ft_printf(const char *str, ...);
 
-int	ft_print_s(char *s);
+int		ft_print_s(char *s);
 
-int	ft_print_p(uintptr_t ptr);
+int		ft_print_p(uintptr_t ptr);
 
-int	check_base(char *base);
+int		check_base(char *base);
 
-int	ft_print_d(int n);
+int		ft_print_d(int n);
 
-int	ft_print_i(int n);
+int		ft_print_i(int n);
 
-int	ft_print_u(unsigned int n);
+int		ft_print_u(unsigned int n);
 
-int	ft_print_x(unsigned int n, int format);
+int		ft_print_x(unsigned int n, int format);
 
 // GET_NEXT_LINE
 
