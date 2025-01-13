@@ -6,12 +6,11 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 16:02:58 by guphilip          #+#    #+#             */
-/*   Updated: 2024/12/31 12:16:28 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/01/13 11:52:06 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../../includes/push_swap.h"
-#include "../../../../LIBFT/includes/libft.h"
+#include "../../../includes/push_swap.h"
 
 static void	push(t_stack_node **dst, t_stack_node **src)
 {
@@ -37,17 +36,18 @@ static void	push(t_stack_node **dst, t_stack_node **src)
 	}
 }
 
-void pa(t_stack_node **a, t_stack_node **b, bool print)
+void	pa(t_stack_node **a, t_stack_node **b, bool print)
 {
 	push(a, b);
 	if (print)
 		ft_printf("pa\n");
 }
 
-void pb(t_stack_node **b, t_stack_node **a, bool print)
+void	pb(t_stack_node **b, t_stack_node **a, bool print)
 {
 	push(b, a);
 	if (print)
 		ft_printf("pb\n");
 }
+
 
