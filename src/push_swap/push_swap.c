@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 15:13:32 by guphilip          #+#    #+#             */
-/*   Updated: 2025/01/20 15:36:14 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/01/20 16:03:45 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ static void	free_split(char **split)
 	free(split);
 }
 
-static char	**parse_arguments(int argc, char **argv)
-{
-	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		return (NULL);
-	if (argc == 2)
-		return (ft_split(argv[1], ' '));
-	return (argv);
-}
+// static char	**parse_arguments(int argc, char **argv)
+// {
+// 	if (argc == 1 || (argc == 2 && !argv[1][0]))
+// 		return (NULL);
+// 	if (argc == 2)
+// 		return (ft_split(argv[1], ' '));
+// 	return (argv);
+// }
 
 static void	sort_stack(t_stack_node **a, t_stack_node **b)
 {
@@ -46,10 +46,10 @@ static void	sort_stack(t_stack_node **a, t_stack_node **b)
 		sort_stacks(a, b);
 }
 
-static void	cleanup(t_stack_node **a, char **split_argv)
+static void	cleanup(t_stack_node **a, char **split_argv, int argc)
 {
 	free_stack(a);
-	if (split_argv)
+	if (argc == 2)
 		free_split(split_argv);
 }
 
@@ -61,15 +61,17 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
-	split_argv = parse_arguments(argc, argv);
-	if (!split_argv)
-		return (1);
+	argv++;
+	if (argc < 2)
+		return 1;
 	if (argc == 2)
-		argv = split_argv;
-	init_stack_a(&a, argv + 1);
+		split_argv = ft_split(argv[0], ' ');
+	else
+		split_argv = argv;
+	init_stack_a(&a, split_argv);
 	if (!stack_sorted(a))
 		sort_stack(&a, &b);
-	cleanup(&a, split_argv);
+	cleanup(&a, split_argv, argc);
 	return (0);
 }
 

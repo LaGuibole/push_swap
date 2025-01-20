@@ -1,6 +1,6 @@
 push_swap_tester/
 push_swap_visualizer/
 obj/
-push_swap
+./push_swap
 LIBFT/obj/
 LIBFT/libft.a
