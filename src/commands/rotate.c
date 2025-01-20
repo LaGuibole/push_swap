@@ -6,11 +6,11 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 09:47:08 by guphilip          #+#    #+#             */
-/*   Updated: 2025/01/13 11:52:42 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:46:26 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 static void	rotate(t_stack_node **stack)
 {

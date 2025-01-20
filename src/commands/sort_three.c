@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_init.c                                       :+:      :+:    :+:   */
+/*   sort_three.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/30 15:15:22 by guphilip          #+#    #+#             */
-/*   Updated: 2025/01/13 10:11:20 by guphilip         ###   ########.fr       */
+/*   Created: 2025/01/15 17:48:50 by guphilip          #+#    #+#             */
+/*   Updated: 2025/01/16 12:52:37 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "../../includes/push_swap.h"
 
-static long	ft_atol(const char	*nptr)
+void	sort_three(t_stack_node **a)
 {
-	int		i;
-	int		sign;
-	long	res;
+	t_stack_node	*biggest_node;
 
-	i = 0;
-	sign = 1;
-	res = 0;
-	while (((nptr[i] >= '\t' && nptr[i] <= '\r') || nptr[i] == ' '))
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
-	{
-		if (nptr[i] == '-')
-			sign = -sign;
-		i++;
-	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		res *= 10;
-		res += nptr[i] - '0';
-		i++;
-	}
-	return (res * sign);
+	biggest_node = find_max(*a);
+	if (biggest_node == *a)
+		ra(a, true);
+	else if ((*a)->next == biggest_node)
+		rra(a, true);
+	if ((*a)->nbr > (*a)->next->nbr)
+		sa(a, true);
 }

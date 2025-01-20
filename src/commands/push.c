@@ -6,11 +6,11 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 16:02:58 by guphilip          #+#    #+#             */
-/*   Updated: 2025/01/13 11:52:06 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:46:16 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 static void	push(t_stack_node **dst, t_stack_node **src)
 {
@@ -49,5 +49,3 @@ void	pb(t_stack_node **b, t_stack_node **a, bool print)
 	if (print)
 		ft_printf("pb\n");
 }
-
-

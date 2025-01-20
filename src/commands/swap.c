@@ -6,12 +6,12 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:06:03 by guphilip          #+#    #+#             */
-/*   Updated: 2025/01/13 10:09:35 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:46:43 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-#include "../../../../LIBFT/includes/libft.h"
+#include "../../LIBFT/includes/libft.h"
 
 static void	swap(t_stack_node **head)
 {
