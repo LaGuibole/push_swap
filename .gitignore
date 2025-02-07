@@ -4,3 +4,4 @@ obj/
 ./push_swap
 LIBFT/obj/
 LIBFT/libft.a
+.vscode
