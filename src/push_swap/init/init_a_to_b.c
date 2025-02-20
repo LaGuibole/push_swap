@@ -6,12 +6,15 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:44:19 by guphilip          #+#    #+#             */
-/*   Updated: 2025/01/20 15:36:31 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/02/20 12:25:16 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/push_swap.h"
 
+/// @brief Assigns an index to each node in the stack and determines if it is
+/// above the median
+/// @param stack Pointer to the head of the stack
 void	current_index(t_stack_node *stack)
 {
 	int	i;
@@ -33,6 +36,9 @@ void	current_index(t_stack_node *stack)
 	}
 }
 
+/// @brief Finds the optimal target node in stack B for each node in stack A
+/// @param a Pointer to the head of stack A
+/// @param b Pointer to the head of stack B
 static void	set_target_a(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*current_b;
@@ -60,6 +66,9 @@ static void	set_target_a(t_stack_node *a, t_stack_node *b)
 	}
 }
 
+/// @brief Computes the cost of pushing each node from stack A to stack B
+/// @param a Pointer to the head of stack A
+/// @param b Pointer to the head of stack B
 static void	cost_analysis_a(t_stack_node *a, t_stack_node *b)
 {
 	int	len_a;
@@ -80,6 +89,9 @@ static void	cost_analysis_a(t_stack_node *a, t_stack_node *b)
 	}
 }
 
+/// @brief Identifies the node in the stack with the lowest push cost and marks
+/// it as the cheapesr node
+/// @param stack Pointer to the head of the stack
 void	set_cheapest(t_stack_node *stack)
 {
 	long			cheapest_value;
@@ -100,6 +112,9 @@ void	set_cheapest(t_stack_node *stack)
 	cheapest_node->cheapest = true;
 }
 
+/// @brief Initializes all nodes in stack A for sorting operations
+/// @param a Pointer to the head of stack A
+/// @param b POinter to the head of stack B
 void	init_nodes_a(t_stack_node *a, t_stack_node *b)
 {
 	current_index(a);

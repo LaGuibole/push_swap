@@ -6,12 +6,14 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 09:47:08 by guphilip          #+#    #+#             */
-/*   Updated: 2025/01/16 12:46:26 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/02/20 12:02:24 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+/// @brief Rotates the stack (first element becomes last)
+/// @param stack Pointer to the stack's head pointer
 static void	rotate(t_stack_node **stack)
 {
 	t_stack_node	*last_node;
@@ -26,6 +28,9 @@ static void	rotate(t_stack_node **stack)
 	last_node->next->next = NULL;
 }
 
+/// @brief Performs a rotate on stack A
+/// @param a Pointer to the stack's A head pointer
+/// @param print Print ra if true
 void	ra(t_stack_node **a, bool print)
 {
 	rotate(a);
@@ -33,6 +38,9 @@ void	ra(t_stack_node **a, bool print)
 		ft_printf("ra\n");
 }
 
+/// @brief Performs a rotate on stack B
+/// @param b Pointer to the stack's B head pointer
+/// @param print Print rb if true
 void	rb(t_stack_node **b, bool print)
 {
 	rotate(b);
@@ -40,6 +48,10 @@ void	rb(t_stack_node **b, bool print)
 		ft_printf("rb\n");
 }
 
+/// @brief Performs a rotate on both A and B stack
+/// @param a Pointer to the stack's A head pointer
+/// @param b Pointer to the stack's B head pointer
+/// @param print Print rr if true
 void	rr(t_stack_node **a, t_stack_node **b, bool print)
 {
 	rotate(a);

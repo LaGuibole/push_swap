@@ -6,12 +6,14 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 17:48:50 by guphilip          #+#    #+#             */
-/*   Updated: 2025/01/16 12:52:37 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/02/20 12:13:36 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+/// @brief Sort a stack of three elements in ascending order
+/// @param a Pointer to the stack A's head pointer
 void	sort_three(t_stack_node **a)
 {
 	t_stack_node	*biggest_node;

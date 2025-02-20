@@ -6,12 +6,15 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:17:01 by guphilip          #+#    #+#             */
-/*   Updated: 2025/01/16 13:35:04 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/02/20 12:43:08 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+/// @brief Calculates the length of the stack
+/// @param stack Pointer to the head of the stack
+/// @return The number of elements in the stack
 int	stack_len(t_stack_node *stack)
 {
 	int	count;
@@ -27,6 +30,9 @@ int	stack_len(t_stack_node *stack)
 	return (count);
 }
 
+/// @brief Finds the last node of the stack
+/// @param stack Pointer to the head of the stack
+/// @return Pointer to the last node, or NULL is stack is empty
 t_stack_node	*find_last(t_stack_node *stack)
 {
 	if (!stack)
@@ -38,6 +44,9 @@ t_stack_node	*find_last(t_stack_node *stack)
 	return (stack);
 }
 
+/// @brief Check if the stack is sorted in ascending order
+/// @param stack Pointer to the head of the stack
+/// @return True if the stack is sorted, false otherwise
 bool	stack_sorted(t_stack_node *stack)
 {
 	if (!stack)
@@ -51,6 +60,10 @@ bool	stack_sorted(t_stack_node *stack)
 	return (true);
 }
 
+/// @brief Finds the node with the minimum value in the stack
+/// @param stack Pointer to the head of the stack
+/// @return Pointer to the node containing the smallest value or NULL if stack
+/// is empty
 t_stack_node	*find_min(t_stack_node *stack)
 {
 	long			min;
@@ -71,6 +84,9 @@ t_stack_node	*find_min(t_stack_node *stack)
 	return (min_node);
 }
 
+/// @brief Finds the node with the maximum value in the stack
+/// @param stack Pointer to the head of the stack
+/// @return Pointer to the node containing the largest value, or NULL if the stack is empty
 t_stack_node	*find_max(t_stack_node *stack)
 {
 	long			max;

@@ -6,12 +6,15 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 17:35:36 by guphilip          #+#    #+#             */
-/*   Updated: 2025/01/16 12:47:07 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/02/20 12:28:04 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/push_swap.h"
 
+/// @brief Assigns a target node in stack A for each node in stack B
+/// @param a Pointer to the head of stack A
+/// @param b Pointer to the head of stack B
 static void	set_target_b(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*current_a;
@@ -39,6 +42,9 @@ static void	set_target_b(t_stack_node *a, t_stack_node *b)
 	}
 }
 
+/// @brief Initializes all nodes in stack B for sorting operations
+/// @param a Pointer to the head of stack A
+/// @param b Pointer to the head of stack B
 void	init_nodes_b(t_stack_node *a, t_stack_node *b)
 {
 	current_index(a);

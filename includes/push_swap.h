@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 12:02:04 by guphilip          #+#    #+#             */
-/*   Updated: 2025/01/20 15:33:38 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/02/20 10:54:02 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,12 @@ typedef void	(*t_rotator)(t_stack_node **a, t_stack_node **b, bool print);
 int				syntax_error(char *str_n);
 int				duplicate_error(t_stack_node *a, int n);
 void			free_stack(t_stack_node **stack);
-void			free_errors(t_stack_node **a);
+void			free_errors(t_stack_node **a, char **argv, int argc);
+void			cleanup(t_stack_node **a, char **split_argv, int argc);
 
 // Stack Init
 
-void			init_stack_a(t_stack_node **a, char **argv);
+void			init_stack_a(t_stack_node **a, char **argv, int argc);
 
 // Nodes Init
 
