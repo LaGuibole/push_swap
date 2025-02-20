@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 12:02:04 by guphilip          #+#    #+#             */
-/*   Updated: 2025/02/20 10:54:02 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/02/20 17:37:38 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@
 # include <stdbool.h>
 # include <limits.h>
 # include <stdio.h>
-# include "../LIBFT/includes/libft.h"
+# include "libft.h"
+
+# define MSG_USAGE "Error :\nUsage : ./push_swap <args>\n \
+		Or\n\
+	./push_swap \"args\" \n"
 
 typedef struct s_stack_node
 {
@@ -39,6 +43,8 @@ int				duplicate_error(t_stack_node *a, int n);
 void			free_stack(t_stack_node **stack);
 void			free_errors(t_stack_node **a, char **argv, int argc);
 void			cleanup(t_stack_node **a, char **split_argv, int argc);
+int				check_len(char *test);
+void			error_message(void);
 
 // Stack Init
 
@@ -83,7 +89,6 @@ void			sb(t_stack_node **b, bool print);
 void			ss(t_stack_node **a, t_stack_node **b, bool print);
 
 // Algo Turk
-
 void			sort_stacks(t_stack_node **a, t_stack_node **b);
 void			sort_three(t_stack_node **a);
 

@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 13:51:52 by guphilip          #+#    #+#             */
-/*   Updated: 2025/02/20 12:20:40 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/02/20 17:36:05 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,9 @@ void	free_errors(t_stack_node **a, char **argv, int argc)
 	cleanup(a, argv, argc);
 	ft_putstr_fd("Error\n", STDERR_FILENO);
 	exit(1);
+}
+
+void	error_message(void)
+{
+	ft_putstr_fd(MSG_USAGE, STDERR_FILENO);
 }

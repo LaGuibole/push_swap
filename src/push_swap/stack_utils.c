@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:17:01 by guphilip          #+#    #+#             */
-/*   Updated: 2025/02/20 12:43:08 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/02/20 12:44:28 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,8 @@ t_stack_node	*find_min(t_stack_node *stack)
 
 /// @brief Finds the node with the maximum value in the stack
 /// @param stack Pointer to the head of the stack
-/// @return Pointer to the node containing the largest value, or NULL if the stack is empty
+/// @return Pointer to the node containing the largest value,
+/// or NULL if the stack is empty
 t_stack_node	*find_max(t_stack_node *stack)
 {
 	long			max;

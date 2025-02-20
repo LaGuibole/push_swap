@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:15:22 by guphilip          #+#    #+#             */
-/*   Updated: 2025/02/20 12:35:07 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/02/20 12:49:27 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,26 +68,6 @@ static void	add_node(t_stack_node **stack, int n)
 		last_node->next = node;
 		node->prev = last_node;
 	}
-}
-
-/// @brief Check if a number has a valid length to fit within an int
-/// @param test The string representing the number
-/// @return 1 if the number is too long 0 otherwise
-int check_len(char *test)
-{
-	int count;
-
-	count = 0;
-	if (*test == '-' || *test == '+')
-		test++;
-	while (*test == '0')
-	{
-		test++;
-	}
-	count = ft_strlen(test);
-	if (count > 11)
-		return (1);
-	return (0);
 }
 
 /// @brief Initializes stack A with values from arguments

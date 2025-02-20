@@ -6,7 +6,7 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 15:13:32 by guphilip          #+#    #+#             */
-/*   Updated: 2025/02/20 12:38:13 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/02/20 17:32:30 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,26 @@ void	cleanup(t_stack_node **a, char **split_argv, int argc)
 		free_split(split_argv);
 }
 
+/// @brief Check if a number has a valid length to fit within an int
+/// @param test The string representing the number
+/// @return 1 if the number is too long 0 otherwise
+int	check_len(char *test)
+{
+	int	count;
+
+	count = 0;
+	if (*test == '-' || *test == '+')
+		test++;
+	while (*test == '0')
+	{
+		test++;
+	}
+	count = ft_strlen(test);
+	if (count > 11)
+		return (1);
+	return (0);
+}
+
 /// @brief Main entry point for the Push_Swap program
 /// @param argc Number of arguments
 /// @param argv Array of arguments
@@ -67,7 +87,10 @@ int	main(int argc, char **argv)
 	b = NULL;
 	argv++;
 	if (argc < 2)
+	{
+		error_message();
 		return (1);
+	}
 	if (argc == 2)
 		split_argv = ft_split(argv[0], ' ');
 	else

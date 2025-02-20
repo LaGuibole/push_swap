@@ -6,12 +6,11 @@
 /*   By: guphilip <guphilip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:06:03 by guphilip          #+#    #+#             */
-/*   Updated: 2025/02/20 12:16:09 by guphilip         ###   ########.fr       */
+/*   Updated: 2025/02/20 17:28:31 by guphilip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-#include "../../LIBFT/includes/libft.h"
 
 /// @brief Swap first two elements of the 2 stacks
 /// @param head A pointer to the head of the stack
